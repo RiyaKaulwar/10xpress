@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="css/style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script defer src="js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10Xpress — Feedback</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span style="font-family: 'Playfair Display', serif;">10Xpress</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="magazines.html">Magazines</a>
+      <a href="best-articles.html">Best Articles</a>
+      <a href="team.html">Team</a>
+      <a href="games.html">Games</a>
+      <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Feedback</h1>
+    <p class="muted">We read every message. Be kind, be honest, be brilliant.</p>
+
+    <!-- Replace action URL with your Formspree endpoint -->
+    <form class="form" action="https://formspree.io/f/REPLACE_WITH_YOURS" method="POST">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Message / Feedback
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <p class="muted tiny-note">By submitting, you agree to our good vibes policy.</p>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 10Xpress • Feedback</p>
+  </footer>
+</body>
+</html>

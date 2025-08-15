@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10Xpress — Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span style="font-family: 'Playfair Display', serif;">10Xpress</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="magazines.html" class="active">Magazines</a>
+      <a href="best-articles.html">Best Articles</a>
+      <a href="team.html">Team</a>
+      <a href="games.html">Games</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+
+  <main class="container">
+    <h1 class="page-title">Games</h1>
+
+    <!-- Word Scramble -->
+    <section class="game">
+      <h2>Word Scramble</h2>
+      <p class="muted">Unscramble the word related to school life.</p>
+      <div class="scramble-box">
+        <span id="scrambled">—</span>
+        <input id="guess" type="text" placeholder="your guess..." />
+        <button class="btn tiny" id="checkGuess">Check</button>
+        <button class="btn tiny ghost" id="newWord">New Word</button>
+      </div>
+      <p id="scrambleResult" class="muted"></p>
+    </section>
+
+    <!-- Mini Crossword (very simple) -->
+    <section class="game">
+      <h2>Mini Crossword</h2>
+      <p class="muted">Fill the 3×3 with these clues: 1) Opposite of ‘fail’ (row 1), 2) A school subject (col 2), 3) Break between classes (diag)</p>
+      <div class="crossword">
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+      </div>
+      <button class="btn tiny" id="checkCrossword">Check</button>
+      <p id="crosswordResult" class="muted"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 10Xpress • Games</p>
+  </footer>
+</body>
+</html>

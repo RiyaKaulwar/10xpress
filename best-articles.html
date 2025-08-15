@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="css/style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script defer src="js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10Xpress — Best Articles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span style="font-family: 'Playfair Display', serif;">10Xpress</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="magazines.html">Magazines</a>
+      <a href="best-articles.html" class="active">Best Articles</a>
+      <a href="team.html">Team</a>
+      <a href="games.html">Games</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Best Articles</h1>
+    <div class="articles-grid">
+      <article class="article-card" id="article-1">
+        <img src="images/ba-syria.jpg" alt="" />
+        <div class="article-body">
+          <h3>Violence Continues in Syria: A Humanitarian Crisis Unfolding</h3>
+          <p class="muted">By Syshasri Raghavan</p>
+          <p>Inside the ongoing tragedy shaping global politics.</p>
+          <a class="btn tiny open-article" href="ba-syria.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+
+      <article class="article-card" id="article-2">
+        <img src="images/ba-indianecon.jpg" alt="" />
+        <div class="article-body">
+          <h3>As The Heat Rises, So Do The Stakes For Indian Economy</h3>
+          <p class="muted">By Avani Radheshyam</p>
+          <p>Exploring more about the rising stakes for the Indian Economy.</p>
+          <a class="btn tiny open-article" href="ba-indianecon.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+
+      <article class="article-card" id="article-3">
+        <img src="images/ba-v10eng.jpg" alt="" />
+        <div class="article-body">
+          <h3>Return of the V10 Engines</h3>
+          <p class="muted">By Krishiv Thummalapalli</p>
+          <p>The roar of motorsport nostalgia makes a comeback.</p>
+          <a class="btn tiny open-article" href="ba-v10eng.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+ <article class="article-card" id="article-3">
+        <img src="images/ba-skype.jpg" alt="" />
+        <div class="article-body">
+          <h3>Death of a Faded Giant – The End of Skype</h3>
+          <p class="muted">By Yi Zou</p>
+          <p>How a once-dominant app lost its voice in the digital era.</p>
+         <a class="btn tiny open-article" href="ba-skype.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+ <article class="article-card" id="article-3">
+        <img src="images/ba-kendrick.jpeg" alt="" />
+        <div class="article-body">
+          <h3>Kendrick Lamar’s Super Bowl Halftime Show</h3>
+          <p class="muted">By Tisha Sehrawat</p>
+          <p>A performance that blended power, politics, and pure artistry.</p>
+          <a class="btn tiny open-article" href="ba-kendrick.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+ <article class="article-card" id="article-3">
+        <img src="images/ba-lafire.jpeg" alt="" />
+        <div class="article-body">
+          <h3>Economic Impact of the Los Angeles Wildfires</h3>
+          <p class="muted">By Suchita Agarwalla</p>
+          <p>Counting the financial cost of a devastating blaze.</p>
+          <a class="btn tiny open-article" href="ba-lafire.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+ <article class="article-card" id="article-3">
+        <img src="images/ba-math.jpeg" alt="" />
+        <div class="article-body">
+          <h3>Mathematical Insights Improve Neural Net Prediction Accuracy</h3>
+          <p class="muted">By Aryan Reddy Hande</p>
+          <p>Sharper algorithms through the power of math.</p>
+          <a class="btn tiny open-article" href="ba-math.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+ <article class="article-card" id="article-3">
+        <img src="images/ba-heart.jpg" alt="" />
+        <div class="article-body">
+          <h3>Breakthrough in Blood Test Predicting Heart Attacks</h3>
+          <p class="muted">By Avantika Singh</p>
+          <p>A simple test could save countless lives.</p>
+          <a class="btn tiny open-article" href="ba-heart.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+ <article class="article-card" id="article-3">
+        <img src="images/ba-parrot.jpg" alt="" />
+        <div class="article-body">
+          <h3>Enzyme Changes Behind Parrot Plumage Colors</h3>
+          <p class="muted">By Siddharth Mitra</p>
+          <p>Unraveling the science behind nature’s most vivid feathers.</p>
+          <a class="btn tiny open-article" href="ba-parrot.html">
+            Read Full
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Article Modal (content injected by JS) -->
+  <div class="modal" id="articleModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" data-close>×</button>
+      <div class="modal-body">
+        <article id="articleContent"></article>
+      </div>
+    </div>
+    <div class="modal-backdrop" data-close></div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 10Xpress • Best Articles</p>
+  </footer>
+</body>
+</html>
