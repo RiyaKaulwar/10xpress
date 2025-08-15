@@ -8,39 +8,171 @@
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/main.js"></script>
 </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Word Scramble Game</title>
+  <style>
+    body {
+      background: black;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Game Card */
+    .game {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 18px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 12px rgba(255,255,255,0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .muted {
+      color: #aaa;
+      font-size: 0.9em;
+    }
+
+    /* Scramble Layout */
+    .scramble-box {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    #scrambled {
+      font-weight: 800;
+      letter-spacing: .15em;
+      font-size: 1.5em;
+      color: white;
+      padding: 5px 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+    }
+
+    .scramble-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    /* Input Style */
+    #guess {
+      background: #000;
+      color: white;
+      border: 1px solid #444;
+      padding: 6px 10px;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    #guess:focus {
+      border-color: #888;
+    }
+
+    /* Button Style */
+    .btn {
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #ddd;
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .btn.ghost:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
 <body>
-  <header class="navbar">
-    <a class="brand" href="index.html">
-      <span style="font-family: 'Playfair Display', serif;">10Xpress</span>
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="magazines.html" class="active">Magazines</a>
-      <a href="best-articles.html">Best Articles</a>
-      <a href="team.html">Team</a>
-      <a href="games.html">Games</a>
-      <a href="feedback.html">Feedback</a>
-    </nav>
-  </header>
 
+  <!-- Word Scramble Game -->
+  <section class="game">
+    <h2>Word Scramble</h2>
+    <p class="muted">Unscramble the word related to school life.</p>
+    
+    <div class="scramble-box">
+      <span id="scrambled">—</span>
+      <input id="guess" type="text" placeholder="Your guess..." />
+    </div>
 
-  <main class="container">
-    <h1 class="page-title">Games</h1>
+    <div class="scramble-buttons">
+      <button class="btn tiny" id="checkGuess">Check</button>
+      <button class="btn tiny ghost" id="newWord">New Word</button>
+    </div>
 
-    <!-- Word Scramble -->
-    <section class="game">
-      <h2>Word Scramble</h2>
-      <p class="muted">Unscramble the word related to school life.</p>
-      <div class="scramble-box">
-        <span id="scrambled"></span>
-        <input id="guess" type="text" placeholder="your guess..." />
-        <button class="btn tiny" id="checkGuess">Check</button>
-        <button class="btn tiny ghost" id="newWord">New Word</button>
-      </div>
-      <p id="scrambleResult" class="muted"></p>
-    </section>
+    <p id="scrambleResult" class="muted"></p>
+  </section>
 
-    <!-- Mini Crossword (very simple) -->
+  <script>
+    (function(){
+      const words = [
+        'homework','cafeteria','science','library','debate',
+        'project','innovation','deadline','magazine','article'
+      ];
+
+      const scrambledEl = document.getElementById('scrambled');
+      const guessInput = document.getElementById('guess');
+      const checkBtn = document.getElementById('checkGuess');
+      const newBtn = document.getElementById('newWord');
+      const resultEl = document.getElementById('scrambleResult');
+
+      let currentWord = '';
+
+      function shuffle(str) {
+        return str.split('').sort(() => Math.random() - 0.5).join('');
+      }
+
+      function pickNewWord() {
+        currentWord = words[Math.floor(Math.random() * words.length)];
+        let scrambled = shuffle(currentWord);
+        while (scrambled === currentWord) scrambled = shuffle(currentWord);
+
+        scrambledEl.textContent = scrambled.toUpperCase();
+        guessInput.value = '';
+        resultEl.textContent = '';
+      }
+
+      checkBtn.addEventListener('click', () => {
+        if (guessInput.value.trim().toLowerCase() === currentWord) {
+          resultEl.textContent = '✅ Correct!';
+          resultEl.style.color = 'lightgreen';
+        } else {
+          resultEl.textContent = '❌ Try Again';
+          resultEl.style.color = 'tomato';
+        }
+      });
+
+      newBtn.addEventListener('click', pickNewWord);
+
+      pickNewWord();
+    })();
+  </script>
+
+</body>
+    <!-- Mini Crossword -->
     <section class="game">
       <h2>Mini Crossword</h2>
       <p class="muted">Fill the 3×3 with these clues: 1) Opposite of ‘fail’ (row 1), 2) A school subject (col 2), 3) Break between classes (diag)</p>
