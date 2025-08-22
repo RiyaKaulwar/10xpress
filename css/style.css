@@ -82,7 +82,7 @@ p{line-height:1.6}
 /* Team */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
 .person-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center}
-.person-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;filter:grayscale(1)}
+.person-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;}
 
 /* Games */
 .game{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin:14px 0}
